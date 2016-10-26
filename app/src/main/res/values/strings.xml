@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MeiDeBi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorable_app_name">没得比正品全球购</string>
+    <string name="tab_all">全部</string>
+    <string name="tab_domestic">国内优惠</string>
+    <string name="tab_essence">海淘精品</string>
+    <string name="tab_tmall">天猫折扣</string>
+    <string name="title_conversion">领券</string>
+    <string name="title_conversion_detail">优惠详情</string>
+    <string name="title_bind">绑定手机</string>
+    <string name="tab_show">晒单</string>
+    <string name="app_recommend_name">应用推荐</string>
+    <string name="task_title">我要做任务</string>
+    <string name="task_rule">规则</string>
+    <string name="show_detail_name">晒单详情</string>
+</resources>

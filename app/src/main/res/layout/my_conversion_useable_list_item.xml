@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/show_pic"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_weight="2">
+            <ImageView
+                android:id="@+id/my_conversion_useable_item_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="去使用"
+                android:textColor="@color/white"
+                android:id="@+id/my_conversion_useable_item_tv5"
+                android:gravity="center"
+                android:background="@color/colorIndicator"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textColor="@color/orange"
+                android:id="@+id/my_conversion_useable_item_tv1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="券号:"
+                android:textSize="10sp"
+                android:id="@+id/my_conversion_useable_item_tv2"
+                android:layout_below="@+id/my_conversion_useable_item_tv1"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用开始时间:"
+                android:textSize="10sp"
+                android:id="@+id/my_conversion_useable_item_tv3"
+                android:layout_above="@+id/my_conversion_useable_item_tv4"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textSize="10sp"
+                android:id="@+id/my_conversion_useable_item_tv4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

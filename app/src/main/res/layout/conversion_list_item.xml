@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/show_pic"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/conversion_logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/conversion_price"
+                android:layout_centerInParent="true"
+                android:text="15"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="元券"
+                android:textSize="10sp"
+                android:layout_centerInParent="true"
+                android:id="@+id/conversion_price_description"
+                android:layout_toRightOf="@id/conversion_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/conversion_price_detail"
+                android:textSize="10sp"
+                android:text="满188元使用"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/conversion_price"
+                android:layout_alignLeft="@+id/conversion_price"
+                android:layout_alignStart="@+id/conversion_price" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

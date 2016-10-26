@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sunshine.cl.meidebi.activity.ConversionDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/conversion_detail_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/conversion_detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/btn_toolbar_back_normal" />
+
+        <TextView
+            android:id="@+id/conversion_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/conversion_detail_back"
+            android:padding="10dp"
+            android:text="@string/title_conversion_detail" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/title_separate"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/conversion_detail_title_bar"
+        android:background="@color/separator" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_separate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/conversion_detail_pic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/conversion_detail_ticket_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="一号店188-15元优惠券"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/conversion_detail_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10铜币兑换"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是否全场通用:是"
+                    android:layout_marginTop="10dp"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="兑换等级:无限制"
+                    android:layout_marginTop="10dp"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是否允许新用户兑换:是"
+                    android:layout_marginTop="10dp"
+                    android:textSize="11sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/conversion_detail_endTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="兑换结束时间:"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/conversion_detail_content_endTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/conversion_detail_endTime"
+                        android:text="2016-11-30 23:59"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/conversion_detail_startTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="兑换开始时间:"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/conversion_detail_content_startTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/conversion_detail_startTime"
+                        android:text="2016-10-21 16:39"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/conversion_detail_use_endTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="兑换开始时间:"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/conversion_detail_content_ues_endTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/conversion_detail_use_endTime"
+                        android:text="2016-11-30 23:59"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator"
+                    android:layout_marginTop="10dp"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="优惠券说明"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="10dp"/>
+
+                <WebView
+                    android:id="@+id/conversion_detail_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/conversion_detail_bottom"
+        android:background="@color/separator"></View>
+
+    <RelativeLayout
+        android:id="@+id/conversion_detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:id="@+id/conversion_detail_good_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:button="@null"
+                    android:background="@drawable/collect" />
+
+                <TextView
+                    android:id="@+id/conversion_detail_good_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/conversion_detail_good_img"
+                    android:text="1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/conversion_detail_comment_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/ic_detail_comment_nromal" />
+
+                <TextView
+                    android:id="@+id/conversion_detail_comment_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/conversion_detail_comment_img"
+                    android:text="0" />
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/orange"
+                android:text="立即兑换"
+                android:textColor="@color/white"
+                android:id="@+id/conversion_detail_btn"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+

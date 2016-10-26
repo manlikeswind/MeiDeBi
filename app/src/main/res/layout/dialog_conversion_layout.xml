@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="铜币兑换"
+            android:id="@+id/textView25"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="兑换该券将扣除"
+            android:id="@+id/textView26"
+            android:layout_below="@+id/textView25"
+            android:layout_alignLeft="@+id/textView25"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/dialog_conversion_count"
+            android:layout_alignBottom="@+id/textView26"
+            android:layout_toRightOf="@+id/textView26" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="铜币"
+            android:id="@+id/textView27"
+            android:layout_alignBottom="@+id/dialog_conversion_count"
+            android:layout_toRightOf="@+id/dialog_conversion_count" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:id="@+id/dialog_conversion_yes"
+            android:layout_below="@+id/textView27"
+            android:layout_toRightOf="@+id/dialog_conversion_count"
+            android:layout_toEndOf="@+id/dialog_conversion_count"
+            android:layout_marginTop="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:id="@+id/dialog_conversion_no"
+            android:layout_alignBottom="@+id/dialog_conversion_yes"
+            android:layout_toRightOf="@+id/dialog_conversion_yes"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

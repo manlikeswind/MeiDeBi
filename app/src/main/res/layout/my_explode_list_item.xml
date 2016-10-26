@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/my_explode_item_img"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="18sp"
+        android:id="@+id/my_explode_item_tv1"
+        android:layout_alignTop="@+id/my_explode_item_img"
+        android:layout_toRightOf="@+id/my_explode_item_img"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥269.00"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:id="@+id/my_explode_item_tv2"
+        android:layout_below="@+id/my_explode_item_tv1"
+        android:layout_alignLeft="@+id/my_explode_item_tv1"
+        android:layout_marginTop="3dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="商城:"
+        android:textSize="10sp"
+        android:id="@+id/my_explode_item_tv3"
+        android:layout_below="@+id/my_explode_item_tv2"
+        android:layout_alignLeft="@+id/my_explode_item_tv2"
+        android:layout_marginTop="3dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="爆料时间"
+        android:textSize="10sp"
+        android:id="@+id/my_explode_item_tv4"
+        android:layout_below="@+id/my_explode_item_tv3"
+        android:layout_alignLeft="@+id/my_explode_item_tv3"
+        android:layout_marginTop="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="状态"
+        android:textSize="10sp"
+        android:id="@+id/my_explode_item_tv5"
+        android:layout_alignBottom="@+id/my_explode_item_img"
+        android:layout_alignLeft="@+id/my_explode_item_tv4" />
+
+</RelativeLayout>

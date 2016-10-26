@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="155dp">
+        <TextView
+            android:id="@+id/options_name"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建任务"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:text="http://119.cc/lockscreen.LockScreen_s1025.apk"
+            android:id="@+id/options_url"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/options_name" />
+        <View
+            android:id="@+id/options_separate"
+            android:layout_below="@id/options_url"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/separator"></View>
+        <LinearLayout
+            android:id="@+id/options_layout"
+            android:layout_below="@id/options_separate"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/options_cancel"
+                android:text="取消"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/separator"></View>
+            <TextView
+                android:id="@+id/options_sure"
+                android:text="确定"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

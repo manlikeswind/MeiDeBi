@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sunshine.cl.meidebi.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relayout_home"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/radio_relayout">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/radio_relayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#55000000"
+            android:layout_above="@+id/radioGroup"/>
+
+        <ImageView
+            android:layout_width="57dp"
+            android:layout_height="73dp"
+            android:src="@mipmap/baoliao_ico_normal"
+            android:id="@+id/baoliao"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:id="@+id/radioGroup"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:checked="true"
+                android:drawableTop="@drawable/radiobutton1"
+                android:textColor="@drawable/radiobutton_text"
+                android:text="优惠"
+                android:id="@+id/radioButton1"
+                android:button="@null" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@drawable/radiobutton2"
+                android:textColor="@drawable/radiobutton_text"
+                android:text="晒单"
+                android:id="@+id/radioButton2"
+                android:button="@null" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:id="@+id/baoliao1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@drawable/radiobutton3"
+                android:textColor="@drawable/radiobutton_text"
+                android:text="兑换"
+                android:id="@+id/radioButton3"
+                android:button="@null" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@drawable/radiobutton4"
+                android:textColor="@drawable/radiobutton_text"
+                android:text="我的"
+                android:id="@+id/radioButton4"
+                android:button="@null" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:id="@+id/relativeLayout">
+
+        <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+            android:id="@+id/autoScrollViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager>
+
+        <LinearLayout
+            android:id="@+id/ad_llayout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/autoScrollViewPager"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/relativeLayout"
+        android:id="@+id/linearLayout">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/relayout_haitao"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:src="@mipmap/haitao_ico"
+                android:scaleType="centerCrop"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="海淘"
+                android:textColor="#FFA095"
+                android:textSize="18sp"
+                android:id="@+id/textView"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直邮"
+                android:id="@+id/textView2"
+                android:textSize="18sp"
+                android:layout_alignTop="@+id/textView"
+                android:layout_toRightOf="@+id/textView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直邮就是这么爽"
+                android:id="@+id/textView3"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_alignLeft="@+id/textView" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="#22000000"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/discount_look">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="21dp"
+                    android:id="@+id/imageView2"
+                    android:src="@mipmap/youhuizhibo_ico" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="优惠券直播"
+                    android:id="@+id/textView4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imageView2" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#22000000"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/cabbage_price"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageView3"
+                    android:src="@mipmap/baicai_ico"
+                    android:scaleType="centerCrop"
+                    android:layout_marginRight="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="白菜价"
+                    android:layout_toRightOf="@+id/imageView3" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#22000000"
+        android:layout_below="@+id/linearLayout" />
+
+
+</RelativeLayout>

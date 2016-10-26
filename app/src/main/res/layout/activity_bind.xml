@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sunshine.cl.meidebi.activity.BindActivity">
+
+    <RelativeLayout
+        android:id="@+id/bind_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/bind_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/btn_toolbar_back_normal" />
+
+        <TextView
+            android:id="@+id/bind_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bind_back"
+            android:padding="10dp"
+            android:text="@string/title_bind" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/bind_separate"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/bind_title_bar"
+        android:background="@color/separator" />
+
+    <RelativeLayout
+        android:id="@+id/bind_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bind_separate"
+        android:background="@color/colorBindTip">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="根据国家网信办发布《移动互联网应用程序信息服务管理规定》第七条:按照'后台实名,前台资源'的原则,对注册用户进行基于移动电话号码等真实身份信息认证.旨在加强对移动互联网应用程序(APP)信息服务的规范管理。" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv1"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="请比友放心,我们一定严格保护用户信息,绝不外泄。" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bind_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bind_tip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/bind_number_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/bind_img_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/phone_ico" />
+
+            <EditText
+                android:id="@+id/bind_et_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/bind_img_number"
+                android:background="@null"
+                android:hint="请输入您的手机号" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/bind_number_separate"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/bind_number_info"
+            android:layout_marginTop="10dp"
+            android:background="@color/separator" />
+
+        <RelativeLayout
+            android:id="@+id/bind_check_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bind_number_separate">
+
+            <ImageView
+                android:id="@+id/bind_img_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/yzm_ico" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/bind_img_check"
+                android:background="@null"
+                android:hint="请输入收到的验证码" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:background="@color/orange"
+                android:text="发送验证码"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/bind_check_separate"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/bind_check_info"
+            android:background="@color/separator" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bind_no_binding"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/orange"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="立即绑定"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bind_no_binding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/separator"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="暂不绑定"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>
+

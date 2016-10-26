@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/app_recommend_list"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/app_recommend_list_logo"
+            android:src="@mipmap/ic_launcher"
+            android:background="@drawable/show_pic"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+        <TextView
+            android:id="@+id/app_recommend_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/app_recommend_list_logo"
+            android:layout_alignTop="@id/app_recommend_list_logo"
+            android:layout_marginLeft="10dp"
+            android:text="分享双重好礼享不停"/>
+        <TextView
+            android:id="@+id/app_recommend_list_logo_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:textSize="11sp"
+            android:layout_below="@id/app_recommend_list_title"
+            android:layout_toRightOf="@id/app_recommend_list_logo"
+            android:layout_marginTop="3dp"
+            android:maxEms="10"
+            android:layout_marginLeft="10dp"
+            android:text="分享没得比给好友，或铜币贡献值双重奖励。"/>
+        <Button
+            android:id="@+id/app_recommend_list_download"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="下载"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:background="@drawable/app_recommend_btn"/>
+    </RelativeLayout>
+</RelativeLayout>

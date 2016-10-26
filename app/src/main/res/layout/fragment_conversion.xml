@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sunshine.cl.meidebi.fragment.ConversionFragment">
+
+    <RelativeLayout
+        android:id="@+id/conversion_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/conversion_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/title_conversion"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/separate"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/conversion_title_bar"
+        android:background="@color/separator"></View>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/conversion_refresh"
+        android:layout_below="@id/separate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/conversion_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>
+

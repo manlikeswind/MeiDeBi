@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sunshine.cl.meidebi.activity.PushActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/push_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/btn_toolbar_back_normal" />
+
+        <TextView
+            android:id="@+id/push_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/push_back"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:text="推送设置" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/textView28"
+        android:background="@color/separator"
+        android:layout_below="@+id/relativeLayout2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/textView28"
+        android:gravity="center_horizontal"
+        android:background="#11000000">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/push_message"
+            android:background="@color/white"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息推送"
+                android:textSize="16sp"
+                android:id="@+id/textView20"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true" />
+
+            <CheckBox
+                android:layout_width="38dp"
+                android:layout_height="20dp"
+                android:id="@+id/push_checkBox1"
+                android:button="@null"
+                android:checked="true"
+                android:background="@drawable/my_checkbox"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/push_jing"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="精华推送"
+                android:textSize="16sp"
+                android:id="@+id/textView21"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true" />
+
+            <CheckBox
+                android:layout_width="38dp"
+                android:layout_height="20dp"
+                android:id="@+id/push_checkBox2"
+                android:button="@null"
+                android:background="@drawable/my_checkbox"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/push_key"
+            android:background="@color/white"
+            android:layout_marginTop="1dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关键词订阅推送"
+                android:textSize="16sp"
+                android:id="@+id/textView22"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true" />
+
+            <CheckBox
+                android:layout_width="38dp"
+                android:layout_height="20dp"
+                android:id="@+id/push_checkBox3"
+                android:button="@null"
+                android:background="@drawable/my_checkbox"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/push_sound"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="声音"
+                android:textSize="16sp"
+                android:id="@+id/textView23"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true" />
+
+            <CheckBox
+                android:layout_width="38dp"
+                android:layout_height="20dp"
+                android:id="@+id/push_checkBox4"
+                android:button="@null"
+                android:background="@drawable/my_checkbox"
+                android:checked="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/push_shake"
+            android:background="@color/white"
+            android:layout_marginTop="1dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="震动"
+                android:textSize="16sp"
+                android:id="@+id/textView24"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true" />
+
+            <CheckBox
+                android:layout_width="38dp"
+                android:layout_height="20dp"
+                android:id="@+id/push_checkBox5"
+                android:button="@null"
+                android:background="@drawable/my_checkbox"
+                android:checked="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/push_model"
+            android:background="@color/white"
+            android:layout_marginTop="1dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="勿扰模式"
+                android:textSize="16sp"
+                android:id="@+id/textView25"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true" />
+
+            <CheckBox
+                android:layout_width="38dp"
+                android:layout_height="20dp"
+                android:id="@+id/push_checkBox6"
+                android:button="@null"
+                android:background="@drawable/my_checkbox"
+                android:checked="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/push_time"
+            android:background="@color/white"
+            android:layout_marginTop="1dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="勿扰时段"
+                android:textSize="16sp"
+                android:id="@+id/textView26"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imageView7"
+                android:layout_marginRight="10dp"
+                android:text="22:00--08:00"
+                android:id="@+id/push_timer" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView7"
+                android:src="@mipmap/enter"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
