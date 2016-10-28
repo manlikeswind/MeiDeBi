@@ -21,14 +21,27 @@
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true" />
 
-        <EditText
+        <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/search_editText"
             android:hint="请输入关键字"
+            android:popupBackground="#E9E9E9"
             android:layout_centerVertical="true"
+            android:dropDownHeight="wrap_content"
+            android:dropDownWidth="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/search_back" />
+            android:layout_toRightOf="@+id/search_back"
+            android:layout_toLeftOf="@+id/search_search"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/search_search"
+            android:src="@mipmap/umeng_socialize_search_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+
     </RelativeLayout>
 
     <TextView

@@ -82,4 +82,13 @@ public class Constants {
         public static final String MY_SHOW_DONE = "http://a.meidebi.com/new.php/Customer-myshoppingexp.html?pagecount=20&page=1&devicetoken=357107070610953&version=3.2.3&devicetype=2&userkey=d177913ed2d2d47120e46b7581d20c8c1243df1b293777d8ec58b7fa3ae8f6c7f021cb9704";
     }
 
+    public static class EXPLODE{
+        //爆料详情页面
+        public static final String EXPLODE_DETAIL = "http://a.meidebi.com/new.php/Share-getshareinfo?devicetype=2&version=3.2.3&url=http%3A%2F%2Fitem.m.jd.com%2Fproduct%2F10623992360.html%3Fsid%3D136e1480e44416179fa1214f9deb1f49&userkey=d177913ed2d2d47120e46b7581d20c8c1243df1b293777d8ec58b7fa3ae8f6c7f021cb9704";
+
+        //爆料详情页面的商品分类地址
+        public static final String EXPLODE_DETAIL_GOOD_CLASS = "http://a.meidebi.com/new.php/Share-getcatetree?devicetype=2&version=3.2.3";
+
+    }
+
 }

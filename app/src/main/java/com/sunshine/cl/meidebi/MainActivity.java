@@ -1,6 +1,8 @@
 package com.sunshine.cl.meidebi;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +16,10 @@ import com.sunshine.cl.meidebi.fragment.FavorableFragment;
 import com.sunshine.cl.meidebi.fragment.MineFragment;
 import com.sunshine.cl.meidebi.fragment.ShowFragment;
 
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Iterator;
+
 public class MainActivity extends AppCompatActivity {
 
     RadioGroup radioGroup;
@@ -23,12 +29,22 @@ public class MainActivity extends AppCompatActivity {
     ShowFragment showFragment;
     ConversionFragment conversionFragment;
     MineFragment mineFragment;
+    int flag = 0;
+    SharedPreferences sp;
+    SharedPreferences.Editor editor;
+    Set<String> set = new HashSet<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         radioGroup = (RadioGroup)findViewById(R.id.radioGroup);
         img_baoliao = (ImageView)findViewById(R.id.baoliao);
+
+        flag = getIntent().getIntExtra("flag",0);
+        sp = getSharedPreferences("me", Context.MODE_PRIVATE);
+        editor = sp.edit();
+        editor.putStringSet("set",set);
+
         initFragment();
         img_baoliao.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,10 +69,20 @@ public class MainActivity extends AppCompatActivity {
             mineFragment = new MineFragment();
         }
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.relayout_home,favorableFragment);
+        if (flag == 0){
+            editor.clear().commit();
+            ft.add(R.id.relayout_home,favorableFragment);
+            ft.add(R.id.relayout_home,mineFragment).hide(mineFragment);
+        }else{
+            ft.add(R.id.relayout_home,favorableFragment).hide(favorableFragment);
+            ft.add(R.id.relayout_home,mineFragment);
+            findViewById(R.id.radioButton1).setPressed(false);
+            findViewById(R.id.radioButton4).setPressed(true);
+        }
+
         ft.add(R.id.relayout_home,showFragment).hide(showFragment);
         ft.add(R.id.relayout_home,conversionFragment).hide(conversionFragment);
-        ft.add(R.id.relayout_home,mineFragment).hide(mineFragment);
+        //ft.add(R.id.relayout_home,mineFragment).hide(mineFragment);
         ft.commit();
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

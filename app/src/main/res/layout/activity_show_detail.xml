@@ -79,9 +79,9 @@
                         android:id="@+id/show_detail_img"
                         android:layout_width="match_parent"
                         android:scaleType="centerCrop"
-                        android:layout_height="140dp"
+                        android:layout_height="200dp"
                         app:riv_corner_radius="10dp"
-                        android:src="@mipmap/task_img"/>
+                        android:background="#efefef"/>
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

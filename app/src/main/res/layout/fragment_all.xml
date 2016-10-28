@@ -5,26 +5,34 @@
     android:layout_height="match_parent"
     tools:context="com.sunshine.cl.meidebi.fragment.AllFragment">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ListView
-            android:id="@+id/allFragment_listView"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/progressBar"
-            android:indeterminateDrawable="@drawable/progressbar"
-            android:layout_below="@+id/allFragment_listView"
-            android:layout_marginBottom="73dp"
-            android:layout_centerHorizontal="true"
-            android:visibility="gone" />
+            <com.sunshine.cl.meidebi.utils.MyListView
+                android:id="@+id/allFragment_listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    </RelativeLayout>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/allFragment_listView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="73dp"
+                android:indeterminateDrawable="@drawable/progressbar"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </android.support.v4.widget.SwipeRefreshLayout>

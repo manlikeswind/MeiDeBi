@@ -1,6 +1,7 @@
 package com.sunshine.cl.meidebi.utils;
 
 import android.content.Context;
+import android.os.Build;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewCompat;
@@ -26,53 +27,67 @@ public class FABScrollBehavior extends FloatingActionButton.Behavior {
     @Override
     public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, FloatingActionButton child, View directTargetChild, View target, int nestedScrollAxes) {
         //确保是竖直状态的滚动
-        return nestedScrollAxes == ViewCompat.SCROLL_AXIS_VERTICAL || super.onStartNestedScroll(coordinatorLayout, child, directTargetChild, target, nestedScrollAxes);
+        return nestedScrollAxes ==
+                ViewCompat.SCROLL_AXIS_VERTICAL||super.onStartNestedScroll(
+                coordinatorLayout,child,directTargetChild,target,nestedScrollAxes);
     }
 
     @Override
     public void onNestedScroll(CoordinatorLayout coordinatorLayout, FloatingActionButton child, View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed) {
         super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed);
-        if (dyConsumed > 0 && !isAnimationOut && child.getVisibility() == View.VISIBLE) {
+        if(dyConsumed>0&&!isAnimationOut&&child.getVisibility() == View.VISIBLE){
             animatorOut(child);
-        } else if (dyConsumed < 0 && child.getVisibility() != View.VISIBLE) {
+        }else if (dyConsumed<0&&child.getVisibility()!=View.VISIBLE){
             animatorIn(child);
         }
     }
 
-    public void animatorOut(FloatingActionButton button) {
-        ViewCompat.animate(button).translationY(button.getHeight() + getMarginButton(button)).setInterpolator(interpolator)
-                .setListener(new ViewPropertyAnimatorListener() {
-                    @Override
-                    public void onAnimationStart(View view) {
-                        FABScrollBehavior.this.isAnimationOut = true;
-                    }
+    public void animatorOut(FloatingActionButton button){
+        if (Build.VERSION.SDK_INT >= 14) {
+            ViewCompat.animate(button).translationY(button.getHeight() + getMarginBottom(button)).setInterpolator(interpolator).withLayer()
+                    .setListener(new ViewPropertyAnimatorListener() {
+                        @Override
+                        public void onAnimationStart(View view) {
+                            FABScrollBehavior.this.isAnimationOut = true;
+                        }
 
-                    @Override
-                    public void onAnimationEnd(View view) {
-                        FABScrollBehavior.this.isAnimationOut = false;
-                    }
+                        @Override
+                        public void onAnimationEnd(View view) {
+                            FABScrollBehavior.this.isAnimationOut = false;
+                            view.setVisibility(View.GONE);
+                        }
 
-                    @Override
-                    public void onAnimationCancel(View view) {
-                        FABScrollBehavior.this.isAnimationOut = false;
-                        view.setVisibility(View.GONE);
-                    }
-                }).start();
+                        @Override
+                        public void onAnimationCancel(View view) {
+                            FABScrollBehavior.this.isAnimationOut = false ;
+                        }
+                    }).start();
+        }else{
+
+        }
+
     }
 
-    public void animatorIn(FloatingActionButton button) {
-        ViewCompat.animate(button).translationY(0).setInterpolator(interpolator).withLayer()
-                .setListener(null).start();
+
+    public void animatorIn(FloatingActionButton button){
+        button.setVisibility(View.VISIBLE);
+        if (Build.VERSION.SDK_INT >= 14) {
+            ViewCompat.animate(button).translationY(0)
+                    .setInterpolator(interpolator).withLayer().setListener(null)
+                    .start();
+        }else{
+
+        }
+
     }
 
-    public int getMarginButton(View v) {
+    public int getMarginBottom(View v){
         int marginBottom = 0;
         ViewGroup.LayoutParams layoutParams = v.getLayoutParams();
-        if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
+        if(layoutParams instanceof ViewGroup.MarginLayoutParams){
             marginBottom = ((ViewGroup.MarginLayoutParams) layoutParams).bottomMargin;
         }
         return marginBottom;
 
     }
 }
-

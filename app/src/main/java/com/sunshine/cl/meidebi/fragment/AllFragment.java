@@ -36,6 +36,7 @@ import com.sunshine.cl.meidebi.callback.JsonCallBack;
 import com.sunshine.cl.meidebi.callback.OnItemClickListener;
 import com.sunshine.cl.meidebi.constants.Constants;
 import com.sunshine.cl.meidebi.http.OKHttpGetUtils;
+import com.sunshine.cl.meidebi.utils.MyListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +48,7 @@ public class AllFragment extends BaseFragment implements JsonCallBack {
 
     boolean isPrepared = false;
     SwipeRefreshLayout srl;
-    ListView listView;
+    MyListView listView;
     View headView;
     AutoScrollViewPager autoScrollViewPager;
     LinearLayout ad_llayout;
@@ -74,7 +75,7 @@ public class AllFragment extends BaseFragment implements JsonCallBack {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_all, container, false);
         srl = (SwipeRefreshLayout) view.findViewById(R.id.allFragment_srl);
-        listView = (ListView) view.findViewById(R.id.allFragment_listView);
+        listView = (MyListView) view.findViewById(R.id.allFragment_listView);
         progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
         headView = LayoutInflater.from(getActivity()).inflate(R.layout.head, null);
         autoScrollViewPager = (AutoScrollViewPager) headView.findViewById(R.id.autoScrollViewPager);

@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/favorable_app_name"
+                android:id="@+id/show_app_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -32,7 +32,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="5dp">
                 <RadioButton
-                    android:id="@+id/favorable_essence"
+                    android:id="@+id/show_essence"
                     android:button="@null"
                     android:checked="true"
                     android:layout_width="31dp"
@@ -40,7 +40,7 @@
                     android:scaleType="centerCrop"
                     android:background="@drawable/favorable_essence"/>
                 <RadioButton
-                    android:id="@+id/favorable_newest"
+                    android:id="@+id/show_newest"
                     android:button="@null"
                     android:layout_width="31dp"
                     android:layout_height="24dp"
@@ -57,25 +57,32 @@
             android:id="@+id/show_refresh"
             android:layout_below="@id/rl_titleBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/show_recycler"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/main_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-            </android.support.v7.widget.RecyclerView>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/show_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                </android.support.v7.widget.RecyclerView>
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/show_float_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/btn_tiny_add"
+                    app:layout_behavior="com.sunshine.cl.meidebi.utils.FABScrollBehavior"
+                    app:backgroundTint="#ff461F"
+                    app:rippleColor="#33728dff"
+                    app:layout_anchor="@id/show_recycler"
+                    app:layout_anchorGravity="bottom|right|end"
+                    android:layout_gravity="bottom|right" />
+            </android.support.design.widget.CoordinatorLayout>
         </android.support.v4.widget.SwipeRefreshLayout>
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/show_float_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/btn_tiny_add"
-            app:layout_behavior="com.sunshine.cl.meidebi.utils.FABScrollBehavior"
-            app:backgroundTint="#ff461F"
-            app:rippleColor="#33728dff"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp" />
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
 

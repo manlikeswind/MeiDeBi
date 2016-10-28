@@ -6,6 +6,7 @@
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:layout_marginTop="10dp"
+    android:paddingBottom="25dp"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -13,8 +14,10 @@
         android:layout_height="match_parent">
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/show_img"
+            android:background="#EFEFEF"
+            android:scaleType="centerCrop"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="200dp"
             app:riv_corner_radius="10dp"/>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -42,7 +45,6 @@
                 android:id="@+id/show_user_pic"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@mipmap/ic_launcher"
                 app:civ_border_width="1dp"
                 app:civ_border_color="@color/gray"/>
             <TextView

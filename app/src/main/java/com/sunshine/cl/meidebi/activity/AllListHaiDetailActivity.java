@@ -1,6 +1,8 @@
 package com.sunshine.cl.meidebi.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Paint;
 import android.graphics.Typeface;
@@ -49,6 +51,10 @@ public class AllListHaiDetailActivity extends AppCompatActivity implements JsonC
     TextView tv_comment;
     TextView tv_past;
     TextView tv_link;
+
+    String id;
+    SharedPreferences sp;
+    SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,8 +81,12 @@ public class AllListHaiDetailActivity extends AppCompatActivity implements JsonC
         tv_comment = (TextView)findViewById(R.id.search_hai_detail_comment);
         tv_past = (TextView)findViewById(R.id.search_hai_detail_past);
         tv_link = (TextView)findViewById(R.id.search_hai_detail_link);
-        String id = getIntent().getStringExtra("id");
-        String path = "http://a.meidebi.com/new.php/Share-onelink?type=2&id="+id+"&devicetype=2&version=3.2.3 ";
+
+        sp = getSharedPreferences("me", Context.MODE_PRIVATE);
+        editor = sp.edit();
+
+        id = getIntent().getStringExtra("id");
+        final String path = "http://a.meidebi.com/new.php/Share-onelink?type=2&id="+id+"&devicetype=2&version=3.2.3 ";
 
         getShopInfo(path);
         img_back.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +94,15 @@ public class AllListHaiDetailActivity extends AppCompatActivity implements JsonC
             public void onClick(View v) {
                 finish();
                 overridePendingTransition(0,R.anim.out);
+            }
+        });
+        img_share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT, path);
+                startActivity(Intent.createChooser(intent,"分享"));
             }
         });
     }
@@ -187,15 +206,18 @@ public class AllListHaiDetailActivity extends AppCompatActivity implements JsonC
             @Override
             public void onClick(View v) {
                 if (collect == 0){
+                    sp.getStringSet("set",null).add(id);
                     collect++;
                     tv_collect.setChecked(true);
                     tv_collect.setText(String.valueOf(Integer.parseInt(info.getData().getVotesm())+1));
                     setMyDialog("已收藏");
                 }else {
+                    sp.getStringSet("set",null).remove(id);
                     collect--;
                     tv_collect.setChecked(false);
                     tv_collect.setText(String.valueOf(Integer.parseInt(info.getData().getVotesm())));
                 }
+                editor.commit();
             }
         });
         tv_comment.setText(info.getData().getCommentcount());

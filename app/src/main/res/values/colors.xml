@@ -16,4 +16,9 @@
     <color name="colorBindTip">#FDFCDD</color>
     <color name="colorTitle">#11000000</color>
     <color name="colorAppBtn">#1EC2B6</color>
+    <color name="color_323232">#323232</color>
+    <color name="color_white">#ffffff</color>
+    <color name="activity_bar_gray">#666666</color>
+    <color name="trans">#11000000</color>
+    <color name="clearcolor">#00000000</color>
 </resources>
